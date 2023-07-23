@@ -1,0 +1,44 @@
+* {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: lightblue;
+    padding: 20px 20px 20px 50px;
+}
+
+
+main section{
+
+display: grid;
+grid-template-columns: 1fr 3fr;
+
+}
+
+#br-image img{
+    width: 100vw;
+    height: 30vh;
+}
+
+#br-image h3 {
+    position: absolute;
+    left: 80%;
+    top: 35%;
+    color: white;
+    
+}
+
+#navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    margin: 40px;
+}
+
+#navbar a {
+    padding: 20px;
+}
+
