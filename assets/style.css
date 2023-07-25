@@ -2,6 +2,8 @@
     font-family: Arial, sans-serif;
 }
 
+/* Navigation Area */
+
 header {
 
     background-color: lightblue;
@@ -14,110 +16,6 @@ h1 {
     width: 200px;
     padding: 20px 0px 20px 50px;
 }
-
-main {
-
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    background-color: lightgrey;
-
-}
-
-main h2 {
-    color: darkblue;
-    font-size: 30px;
-    text-align: center;
-}
-
-section {
-    padding: 20px;
-    width: 90%;
-}
-
-
-
-
-.contact {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    font-size: 22px;
-    font-weight: bold;
-    padding-top: 30px;
-}
-
-.contact a {
-    padding: 30px;
-    text-decoration: underline;
-    text-decoration-thickness: 4px;
-    color: darkblue;
-}
-
-.contact a:hover {
-    color: white;
-}
-
-.image-text {
-    position: absolute;
-    top: 35%;
-    left: 0%;
-    background-color: lightblue;
-    height: 100px;
-    width: 260px;
-}
-
-.image-text h3 {
-    font-size: 22px;
-    color: darkblue;
-    padding-left: 15px;
-}
-
-.image-text p {
-    font-size: 13px;
-    font-weight: bold;
-    padding-left: 15px;
-}
-
-.work1 {
-    position: relative;
-    grid-column: 1/ span 2;
-}
-
-#section-4 {
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-#section-4 img {
-    width: 100%;
-    height: 100%;
-    border: 5px solid lightblue;
-}
-
-#section-4 img:hover {
-    border: 5px solid grey;
-}
-
-#br-image img {
-    width: 100%;
-    height: 30vh;
-}
-
-#br-image h2 {
-    position: absolute;
-    left: 70%;
-    top: 32%;
-    color: darkblue;
-    background-color: lightblue;
-    padding: 15px;
-
-}
-
-/* #img1 {
-    grid-column: 1/ span 2;
-} */
 
 #navbar {
     display: flex;
@@ -143,15 +41,154 @@ section {
     color: white;
 }
 
+
+
+
+#br-image img {
+    width: 100%;
+    height: 30vh;
+}
+
+#br-image h2 {
+    position: absolute;
+    left: 70%;
+    top: 32%;
+    color: darkblue;
+    background-color: lightblue;
+    padding: 15px;
+
+}
+
+/* Main Content */
+
+main {
+
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    background-color: lightgrey;
+
+}
+
+main h2 {
+    color: darkblue;
+    font-size: 30px;
+    text-align: center;
+}
+
+section {
+    padding: 20px;
+    width: 90%;
+}
+
+
+/* Separting columns in Main area */
+
+.border {
+    border-right: 5px solid darkblue;
+}
+
+.border2 {
+    border-right: 5px solid darkblue;
+    height: 100%;
+}
+
+/* Image styling and functionality */
+
+
+.coming-soon{
+    position: absolute;
+    color: darkblue;
+    background-color: lightblue;
+    height: 100px;
+    width: 260px;
+    text-align: center;
+}
+
+
+.image-text {
+    position: absolute;
+    background-color: lightblue;
+    height: 100px;
+    width: 260px;
+}
+
+.image-text h3 {
+    font-size: 22px;
+    color: darkblue;
+    padding-left: 15px;
+}
+
+.image-text p {
+    font-size: 13px;
+    font-weight: bold;
+    padding-left: 15px;
+}
+
+
+.img1 {
+    position: relative;
+    grid-column: 1/ span 2;
+}
+
+#section-4 {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+#section-4 img {
+    width: 100%;
+    height: 100%;
+    border: 5px solid lightblue;
+}
+
+#section-4 img:hover {
+    opacity: .7;
+}
+
+
+/* Conact Section */
+
+.contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: bold;
+    padding-top: 30px;
+}
+
+.contact a {
+    padding: 30px;
+    text-decoration: underline;
+    text-decoration-thickness: 4px;
+    color: darkblue;
+}
+
+.contact a:hover {
+    color: white;
+}
+
 #contact-me {
     padding-top: 30px;
 }
+
+/* Media Queries */
 
 @media screen and (max-width: 992px) {
 
     main,
     nav {
         grid-template-columns: 1fr;
+    }
+
+    .border {
+        border: none;
+    }
+
+    .border2 {
+        border: none;
     }
 
     #br-image h2 {
@@ -172,8 +209,8 @@ section {
     }
 
     #navbar {
-        flex-direction: column;
-        width: 30%;
+        position: relative;
+
     }
 
     #navbar a {
@@ -187,6 +224,18 @@ section {
         text-align: center;
     }
 
+    .border {
+        border-right: none;
+    }
+
+    .border2 {
+        border: none;
+    }
+
+    .img1 {
+        grid-column: 1;
+    }
+
     #section-4 {
         grid-template-columns: 1fr;
         grid-template-rows: 200px 200px 200px 200px 200px;
@@ -194,13 +243,8 @@ section {
     }
 
     #br-image h2 {
-        left: 20%;
-        top: 32%;
+        right: 5%;
+        top: 35%;
     }
-
-    /* #img1 {
-        grid-column: 1;
-    } */
-
 
 }
